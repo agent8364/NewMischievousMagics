@@ -1,6 +1,6 @@
 {
-  "FolderOrderSettings": [],
-  "ResourceOrderSettings": [
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
     {"name":"LookupTables","order":2,"path":"scripts/LookupTables/LookupTables.yy",},
     {"name":"sDemon","order":20,"path":"sprites/sDemon/sDemon.yy",},
     {"name":"oInventorySlot","order":22,"path":"objects/oInventorySlot/oInventorySlot.yy",},
