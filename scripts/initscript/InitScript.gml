@@ -83,6 +83,7 @@ global.currentUpgrades = ds_list_create();
 global.availableUpgrades = ds_list_create();
 ds_list_add(global.availableUpgrades,oBurst);
 ds_list_add(global.availableUpgrades,oMagnetize);
+ds_list_add(global.availableUpgrades,oExplosivity);
 #endregion
 #endregion
 function vector2 (_x=-1, _y=-1) constructor {

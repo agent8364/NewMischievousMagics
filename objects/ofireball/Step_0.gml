@@ -36,6 +36,40 @@ if (place_meeting(x,y,pEnemy)) and (instance_nearest(x,y,pEnemy) != oPentagram){
 						image_angle = direction;
 						canSplit = false;
 				}
+				if (ds_list_find_index(global.currentUpgrades,oOctoBurst) != -1){
+					with(instance_create_layer(x,y,layer,oFireball)){
+						cantHurt = instance_nearest(x,y,pEnemy)
+						show_debug_message(string(cantHurt));
+						speed = other.speed;
+						direction = irandom_range(80,100);
+						image_angle = direction;
+						canSplit = false;
+				}
+					with(instance_create_layer(x,y,layer,oFireball)){
+						cantHurt =instance_nearest(x,y,pEnemy)
+						show_debug_message(string(cantHurt));
+						speed = other.speed;
+						direction = irandom_range(170,190);
+						image_angle = direction;
+						canSplit = false;
+				}
+					with(instance_create_layer(x,y,layer,oFireball)){
+						cantHurt = instance_nearest(x,y,pEnemy)
+						show_debug_message(string(cantHurt));
+						speed = other.speed;
+						direction = irandom_range(260,280);
+						image_angle = direction;
+						canSplit = false;
+				}
+					with(instance_create_layer(x,y,layer,oFireball)){
+						cantHurt = instance_nearest(x,y,pEnemy)
+						show_debug_message(string(cantHurt));
+						speed = other.speed;
+						direction = irandom_range(350,10);
+						image_angle = direction;
+						canSplit = false;
+				}
+				}
 			}
 		}
 	}

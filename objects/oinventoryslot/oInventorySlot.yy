@@ -17,7 +17,10 @@
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pInventory",
+    "path":"objects/pInventory/pInventory.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -40,5 +43,5 @@
     "path":"sprites/sInvSlot/sInvSlot.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

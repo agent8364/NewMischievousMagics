@@ -12,19 +12,10 @@ if (!upgrading) {
 				var one = true;
 				repeat (2){	
 					ds_list_shuffle(global.availableUpgrades);
-					var upgrade = ds_list_find_value(global.availableUpgrades,1);
-					if !ds_list_find_index(global.currentUpgrades, upgrade){
-						ds_list_add(global.currentUpgrades, upgrade);
-					}else {
-						for (var i = 0; i < 50; i ++){
-							ds_list_shuffle(global.availableUpgrades);
-							var upgrade = ds_list_find_value(global.availableUpgrades,1);
-							if !ds_list_find_index(global.currentUpgrades, upgrade){
-								ds_list_add(global.currentUpgrades, upgrade);
-								break;
-							}
-						}
+					if (ds_list_size(global.availableUpgrades)<=1){ 
+						ds_list_add(global.availableUpgrades,oAbyss);
 					}
+					var upgrade = ds_list_find_value(global.availableUpgrades,0);
 					if (one == true){
 						instance_create_layer(544,384,layer,upgrade)
 						one = false;
