@@ -6,4 +6,3 @@ dmg = 1;
 //airTime = room_speed;
 //Create a path
 //path = path_add();
-

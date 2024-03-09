@@ -17,5 +17,3 @@ switch (global.type){
 		global.dmgType = Type.BLUNT;
 		break;
 }
-canthurt = 0;
-cansplit = false;

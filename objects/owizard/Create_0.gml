@@ -6,7 +6,7 @@ cooldown = 0;
 
 //Player Stats
 hp = 5;
-xp = 10;
+xp = 10000;
 neededXP = 10;
 
 levelUp = false;

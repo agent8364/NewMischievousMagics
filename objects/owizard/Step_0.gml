@@ -18,7 +18,7 @@ if (mouse_check_button(mb_left)) and (cooldown <= 3){
 		direction = point_direction(x,y,mouse_x,mouse_y);
 		image_angle = direction;
 		cantHurt = 0;
-		cansplit = true;
+		canSplit = true;
 	}
 }
 cooldown --;
