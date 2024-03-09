@@ -1,0 +1,1 @@
+if (global.selected != id) image_index = 0;

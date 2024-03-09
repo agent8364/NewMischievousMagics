@@ -1,0 +1,2 @@
+list = undefined;
+randomize();
