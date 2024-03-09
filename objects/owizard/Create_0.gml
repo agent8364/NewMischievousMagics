@@ -10,3 +10,4 @@ xp = 10000;
 neededXP = 10;
 
 levelUp = false;
+playerRange = 10;

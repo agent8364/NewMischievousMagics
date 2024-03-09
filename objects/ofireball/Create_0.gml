@@ -17,3 +17,6 @@ switch (global.type){
 		global.dmgType = Type.BLUNT;
 		break;
 }
+
+traveledDistance = 0;
+range = oWizard.playerRange * 32;
