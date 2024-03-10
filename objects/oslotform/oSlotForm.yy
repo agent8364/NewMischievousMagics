@@ -13,8 +13,8 @@
   "name":"oSlotForm",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Backgrounds and UIs",
+    "path":"folders/Objects/Backgrounds and UIs.yy",
   },
   "parentObjectId":{
     "name":"pInventory",

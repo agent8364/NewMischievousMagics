@@ -7,5 +7,6 @@ if (!instance_exists(oPortal)) {
 	}else{
 		instance_deactivate_all(true);
 		instance_activate_object(pInventory);
+		oInventorySlot.visible = true;
 	}
 }

@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"pRequiredEnemies",
+  "%Name":"oAlchemyTable",
   "eventList":[],
   "managed":true,
-  "name":"pRequiredEnemies",
+  "name":"oAlchemyTable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Invisible Objects",
-    "path":"folders/Objects/Invisible Objects.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"pEnemy",
-    "path":"objects/pEnemy/pEnemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sAlchemyTable",
+    "path":"sprites/sAlchemyTable/sAlchemyTable.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

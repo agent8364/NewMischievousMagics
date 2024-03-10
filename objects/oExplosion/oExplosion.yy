@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"pRequiredEnemies",
-  "eventList":[],
+  "%Name":"oExplosion",
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"pRequiredEnemies",
+  "name":"oExplosion",
   "overriddenProperties":[],
   "parent":{
-    "name":"Invisible Objects",
-    "path":"folders/Objects/Invisible Objects.yy",
+    "name":"Backgrounds and UIs",
+    "path":"folders/Objects/Backgrounds and UIs.yy",
   },
-  "parentObjectId":{
-    "name":"pEnemy",
-    "path":"objects/pEnemy/pEnemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sPotion",
+    "path":"sprites/sPotion/sPotion.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"pRequiredEnemies",
+  "%Name":"oAlchemyBackground",
   "eventList":[],
   "managed":true,
-  "name":"pRequiredEnemies",
+  "name":"oAlchemyBackground",
   "overriddenProperties":[],
   "parent":{
-    "name":"Invisible Objects",
-    "path":"folders/Objects/Invisible Objects.yy",
+    "name":"Backgrounds and UIs",
+    "path":"folders/Objects/Backgrounds and UIs.yy",
   },
-  "parentObjectId":{
-    "name":"pEnemy",
-    "path":"objects/pEnemy/pEnemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sUpgradeBG",
+    "path":"sprites/sUpgradeBG/sUpgradeBG.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
