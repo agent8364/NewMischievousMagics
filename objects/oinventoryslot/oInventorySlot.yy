@@ -43,5 +43,5 @@
     "path":"sprites/sInvSlot/sInvSlot.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

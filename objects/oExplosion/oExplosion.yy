@@ -11,7 +11,10 @@
     "name":"Backgrounds and UIs",
     "path":"folders/Objects/Backgrounds and UIs.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pAlchemy",
+    "path":"objects/pAlchemy/pAlchemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+draw_set_font(fPixel);
 function InitScript(){
 
 	enum EnemyState{
@@ -78,13 +77,20 @@ global.form = sSlimeChunk;
 global.typeRarity = 0;
 global.miscRarity = 0;
 global.formRarity = 0;
+global.baseDmg = 0;
+global.baseRange = 0;
+global.basePierce = 0;
+global.alchemyPoints = 1;
+
+#endregion
 #region Upgrades
 global.currentUpgrades = ds_list_create();
 global.availableUpgrades = ds_list_create();
 ds_list_add(global.availableUpgrades,oBurst);
 ds_list_add(global.availableUpgrades,oMagnetize);
-ds_list_add(global.availableUpgrades,oExplosivity);
-#endregion
+ds_list_add(global.availableUpgrades,oExplosivity); //CURSED
+ds_list_add(global.availableUpgrades,oExperimentalExplosives); //CURSED
+ds_list_add(global.availableUpgrades,oNuclear);
 #endregion
 function vector2 (_x=-1, _y=-1) constructor {
 	x = _x;

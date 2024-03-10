@@ -2,11 +2,11 @@ global.dmgType = Type.NORMAL;
 switch (global.form){
 	case sSlimeChunk:
 		image_index = 1;
-		dmg = 1*(global.formRarity+1);
+		dmg = global.baseDmg*(global.formRarity+1);
 		break;
 	case sBone:
 		image_index = 0;
-		dmg = 1.5*(global.formRarity+1);
+		dmg = (global.baseDmg * 1.5) *(global.formRarity+1);
 		break;
 }
 switch (global.type){

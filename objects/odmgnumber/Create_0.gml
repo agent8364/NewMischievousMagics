@@ -2,4 +2,4 @@
 timer = room_speed;
 depth = -1;
 xShift = 8;
-dir = 1;
+dir = choose(-1,1);
