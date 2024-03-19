@@ -11,4 +11,5 @@ canRotate = false;
 hp = 1;
 
 takeDmg = function(type,amount) {
+	
 }

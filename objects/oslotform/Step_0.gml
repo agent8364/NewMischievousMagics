@@ -1,1 +1,0 @@
-select = global.selected;

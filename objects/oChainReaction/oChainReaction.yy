@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sShortFuse",
-    "path":"sprites/sShortFuse/sShortFuse.yy",
+    "name":"sChainReaction",
+    "path":"sprites/sChainReaction/sChainReaction.yy",
   },
   "spriteMaskId":null,
   "visible":true,

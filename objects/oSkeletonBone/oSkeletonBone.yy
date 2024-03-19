@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFireball",
-    "path":"sprites/sFireball/sFireball.yy",
+    "name":"sSkeletonBone",
+    "path":"sprites/sSkeletonBone/sSkeletonBone.yy",
   },
   "spriteMaskId":null,
   "visible":true,

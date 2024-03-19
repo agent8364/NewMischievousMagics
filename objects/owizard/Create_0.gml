@@ -10,4 +10,5 @@ xp = 10000;
 neededXP = 10;
 
 levelUp = false;
-playerRange = 10;
+playerRange = 10 + global.baseRange;
+global.dmgType = Type.NORMAL;

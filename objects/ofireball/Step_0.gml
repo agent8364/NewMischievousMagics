@@ -72,9 +72,12 @@ if (place_meeting(x,y,pEnemy)) and (instance_nearest(x,y,pEnemy) != oPentagram){
 				}
 			}
 		}
+		if (global.canExplode == true){
+			Detonate(dmg,global.explosionRadius);
+		}
 	}
 }
 traveledDistance = distance_to_point(xstart,ystart);
 if (traveledDistance >= range) {
 	instance_destroy();
-}
+} 

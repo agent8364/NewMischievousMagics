@@ -1,5 +1,5 @@
 if (spawnEnemy != undefined){
-	rotateSpd *= 1.005;
+	rotateSpd *= random_range(1.0001,1.01);
 	rotateSpd = clamp(rotateSpd,0,45);
 	canRotate = true;
 }

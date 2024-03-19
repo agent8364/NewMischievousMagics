@@ -3,8 +3,3 @@ global.text = "";
 ds_list_delete(global.availableUpgrades,  ds_list_find_index(global.availableUpgrades,oShortFuse));
 ds_list_add(global.currentUpgrades, oShortFuse);
 //ds_list_add(global.availableUpgrades, oSuperMagnet);
-instance_activate_all();
-instance_deactivate_object(oUpgradeBackground);
-instance_deactivate_object(oUpgradeText);
-instance_deactivate_object(pInventory);
-instance_destroy(pUpgrades);

@@ -1,11 +1,11 @@
 #region Player Movement
-keyLeft = keyboard_check(ord("A"));
-keyRight = keyboard_check(ord("D"));
-keyDown = keyboard_check(ord("S"));
-keyUp = keyboard_check(ord("W"));
+keyLeft = global.controls.getKeyLeft();
+keyRight = global.controls.getKeyRight();
+keyDown = global.controls.getKeyDown();
+keyUp = global.controls.getKeyUp();
 	
-hMove = (keyRight - keyLeft) * moveSpd;
-vMove = (keyDown - keyUp) * moveSpd;
+var hMove = (keyRight - keyLeft) * moveSpd;
+var vMove = (keyDown - keyUp) * moveSpd;
 
 hsp = hMove;
 vsp = vMove;
@@ -43,4 +43,8 @@ y += vsp
 
 if (xp >= neededXP){
 	levelUp = true;
+}
+
+if (global.canExplode == false) and (global.baseBomb != 0){
+	global.canExplode = true;
 }

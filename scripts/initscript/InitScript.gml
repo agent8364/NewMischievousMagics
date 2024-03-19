@@ -69,19 +69,15 @@ part_type_speed(global.WhiteSmokeType,0.5,1,0,0);
 part_type_color1(global.WhiteSmokeType,c_white);
 #endregion
 #region Variables
-global.wave = 0;
-global.selected = noone;
-global.type = noone;
-global.misc = noone;
-global.form = sSlimeChunk;
-global.typeRarity = 0;
-global.miscRarity = 0;
-global.formRarity = 0;
+global.wave = 10;
 global.baseDmg = 0;
 global.baseRange = 0;
 global.basePierce = 0;
-global.alchemyPoints = 1;
-
+global.baseBomb = 0;
+global.canExplode = false;
+global.alchemyPoints = 100;
+global.explosionRadius = 1;
+global.inventory = array_create(5,0);
 #endregion
 #region Upgrades
 global.currentUpgrades = ds_list_create();
@@ -91,8 +87,56 @@ ds_list_add(global.availableUpgrades,oMagnetize);
 ds_list_add(global.availableUpgrades,oExplosivity); //CURSED
 ds_list_add(global.availableUpgrades,oExperimentalExplosives); //CURSED
 ds_list_add(global.availableUpgrades,oNuclear);
+ds_list_add(global.availableUpgrades,oShortFuse);
+ds_list_add(global.availableUpgrades,oSuperRange);
 #endregion
 function vector2 (_x=-1, _y=-1) constructor {
 	x = _x;
 	y = _y;
 }
+function TextGap(){
+	return string_height("jI") + 2;
+}
+function Detonate(damage, radius){
+	instance_destroy();
+	//repeat(3){
+		with (instance_create_layer(x + random_range(-6,6),y + random_range(-6,6),layer,oExplosion)){
+			dmg = damage;
+			image_xscale = 1+(0.1*radius);
+			image_yscale = 1+(0.1*radius);
+		}
+	//}
+}
+#region Viewport Moniter Stuff
+view_wport[0] = window_get_width();
+view_hport[0] = window_get_height();
+#endregion
+#region controls
+global.controls = {
+	moveUp : ord("W"),
+	moveLeft : ord("A"),
+	moveRight:  ord("D"),
+	moveDown : ord("S"),
+	use : ord("E"),
+	upgrade : ord("Q"),
+
+	getKeyUp : function() {
+		return keyboard_check(moveUp);
+	},
+	getKeyLeft : function() {
+		return keyboard_check(moveLeft);
+	},
+	getKeyRight : function() {
+		return keyboard_check(moveRight);
+	},
+	getKeyDown : function() {
+		return keyboard_check(moveDown);
+	},
+	getKeyUse : function() {
+		return keyboard_check_pressed(use);
+	},
+	getKeyUpgrade : function() {
+		return keyboard_check_pressed(upgrade);
+	}
+};
+#endregion
