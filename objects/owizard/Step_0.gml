@@ -45,6 +45,6 @@ if (xp >= neededXP){
 	levelUp = true;
 }
 
-if (global.canExplode == false) and (global.baseBomb != 0){
+if (global.canExplode == false) and (global.data.baseBomb != 0){
 	global.canExplode = true;
 }

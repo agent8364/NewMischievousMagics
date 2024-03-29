@@ -1,5 +1,5 @@
 if (points > 0){
-	global.alchemyPoints ++;
-	global.baseDmg --;
+	global.data.alchemyPoints ++;
+	global.data.baseDmg --;
 	points --
 }

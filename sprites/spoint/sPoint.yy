@@ -23,7 +23,7 @@
   ],
   "name":"sPoint",
   "nineSlice":null,
-  "origin":4,
+  "origin":0,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",

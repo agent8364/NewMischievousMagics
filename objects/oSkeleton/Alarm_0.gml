@@ -21,6 +21,3 @@ instance_create_layer(x,y,layer,oSkeletonBone, {
 	speed : 6,
 	direction : point_direction(x,y,angleX,angleY)
 });
-
-speed = 0;
-alarm[1] = room_speed*1; 

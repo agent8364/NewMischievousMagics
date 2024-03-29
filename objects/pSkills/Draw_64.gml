@@ -1,0 +1,1 @@
+draw_text_global(x*RESSCALE,y*RESSCALE,name);
