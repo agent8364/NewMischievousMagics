@@ -88,9 +88,10 @@ part_type_speed(global.AlsoRedSmokeType,0.5,1,0,0);
 part_type_color1(global.AlsoRedSmokeType,c_red);
 #endregion
 #region Variables
-global.wave = 10;
+global.wave = 1;
 global.canExplode = false;
-global.explosionRadius = 1;
+global.explosionRadius = 1
+global.addativeDmg = 0;
 //global.easyMissions = 
 global.dmgMultiplier = 1;
 global.defaultWindowW = window_get_width();
@@ -124,6 +125,10 @@ ds_list_add(global.availableUpgrades,oShortFuse);
 ds_list_add(global.availableUpgrades,oSuperRange);
 ds_list_add(global.availableUpgrades,oExtraLife);
 ds_list_add(global.availableUpgrades,oReinvigorate);
+ds_list_add(global.availableUpgrades,oTurbo);
+ds_list_add(global.availableUpgrades,oPowerShot);
+ds_list_add(global.availableUpgrades,oBombShots);
+ds_list_add(global.availableUpgrades,oChargeShot);
 #endregion
 #region Viewport Moniter Stuff
 view_wport[0] = window_get_width();

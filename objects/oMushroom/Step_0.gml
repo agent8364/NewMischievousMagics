@@ -13,3 +13,8 @@ if (timer <= 0){
 if (hp <= 0){
 	instance_destroy();
 }
+
+if (distance_to_object(oWizard)<=range) and (currentPauseTime <= 0){
+	currentPauseTime = pauseTime;
+	oWizard.hp -= dmg;
+}

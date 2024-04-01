@@ -1,4 +1,4 @@
-if (place_meeting(x,y,pEnemy)) and (instance_nearest(x,y,pEnemy) != oPentagram){
+if (place_meeting(x,y,pEnemy)) and (!place_meeting(x,y,oPentagram)){
 	if (instance_nearest(x,y,pEnemy) != cantHurt){
 		instance_nearest(x,y,pEnemy).takeDmg(global.dmgType,dmg);
 		instance_destroy();
@@ -67,7 +67,7 @@ if (place_meeting(x,y,pEnemy)) and (instance_nearest(x,y,pEnemy) != oPentagram){
 						speed = other.speed;
 						direction = irandom_range(350,10);
 						image_angle = direction;
-						canSplit = false;
+						canSplit = true;
 				}
 				}
 			}
@@ -79,5 +79,7 @@ if (place_meeting(x,y,pEnemy)) and (instance_nearest(x,y,pEnemy) != oPentagram){
 }
 traveledDistance = distance_to_point(xstart,ystart);
 if (traveledDistance >= range) {
-	instance_destroy();
+	if (sprite_index = sIceBomb){
+		Detonate(dmg,global.explosionRadius);
+	}else{ instance_destroy(); }
 } 

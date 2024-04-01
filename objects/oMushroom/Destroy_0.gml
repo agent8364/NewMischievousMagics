@@ -1,1 +1,1 @@
-instance_create_layer(x,y,layer,oExp);
+instance_create_layer(x+random_range(-16,16),y+random_range(-16,16),layer,oExp);

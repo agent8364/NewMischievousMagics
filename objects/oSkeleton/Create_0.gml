@@ -5,6 +5,7 @@ resist[Type.POISON] = 0.5;
 hp = 3;
 backupHP = 5;
 speed = 2;
+dmg = 7;
 
 takeDmg = function(type,amount) {
 	if (hp <= 0){

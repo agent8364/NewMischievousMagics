@@ -1,1 +1,1 @@
-if (levelUp) draw_text(room_width / 2, 50, "You can level up.");
+if (levelUp == true) draw_text(window_get_width()/2 / 2, 50, "You can level up.");
