@@ -12,8 +12,8 @@ vsp = vMove;
 #endregion
 #region Player Shooting
 if (ds_list_find_index(global.currentUpgrades,oChargeShot)==-1){
-	if (mouse_check_button(mb_left)) and (cooldown <= 3){
-		cooldown = 20;
+	if (mouse_check_button(mb_left)) and (cooldown <= 1){
+		cooldown = 30;
 		with (instance_create_layer(x,y,layer,oFireball)){
 			speed = 10;
 			direction = point_direction(x,y,mouse_x,mouse_y);

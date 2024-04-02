@@ -20,5 +20,5 @@ global.dmgType = Type.NORMAL;
 
 //Charge Stuff
 currentCharge = 0;
-maxCharge = 2;
+maxCharge = 3;
 chargeRate = 0.05;
