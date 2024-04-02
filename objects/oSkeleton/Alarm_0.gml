@@ -10,7 +10,6 @@ var pPosX = wizX + hMove*oWizard.moveSpd*ticks;
 var pPosY = wizY + vMove*oWizard.moveSpd*ticks;
 var angleX = lerp(wizX,pPosX,random_range(0.75,1.25));
 var angleY = lerp(wizY,pPosY,random_range(0.5,1));
-//var P_angle = point_direction(wizX,wizY,wizX+hMove,wizY+vMove);
 
 
 instance_create_layer(x,y,layer,oSkeletonBone, {

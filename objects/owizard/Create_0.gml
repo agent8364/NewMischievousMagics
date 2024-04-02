@@ -11,7 +11,7 @@ blendTime = 0;
 
 //Player Stats
 hp = 100;
-xp = 0;
+xp = 500;
 neededXP = 5;
 
 levelUp = false;

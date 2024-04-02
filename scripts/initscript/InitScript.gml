@@ -88,7 +88,7 @@ part_type_speed(global.AlsoRedSmokeType,0.5,1,0,0);
 part_type_color1(global.AlsoRedSmokeType,c_red);
 #endregion
 #region Variables
-global.wave = 1;
+global.wave = 19;
 global.canExplode = false;
 global.explosionRadius = 1
 global.addativeDmg = 0;
