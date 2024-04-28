@@ -4,14 +4,16 @@ dashDist = 128;
 hsp = 0;
 vsp = 0;
 cooldown = 0;
+maxCooldown = 30;
 iFrames = 30;
 currentIFrames = 0;
 blend = c_white
 blendTime = 0;
+bulletSpeed = 10;
 
 //Player Stats
 hp = 100;
-xp = 500;
+xp = 111000;
 neededXP = 5;
 
 levelUp = false;

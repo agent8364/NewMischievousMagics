@@ -1,5 +1,5 @@
 cursed = false;
-
+if (!variable_instance_exists(self,"pos")) pos = 0;
 textReset = false;
 flameSprite = sFlame;
 resize = function() {

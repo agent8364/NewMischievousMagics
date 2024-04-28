@@ -20,6 +20,12 @@ if (spellCooldown <= 0){
 	with(instance_create_layer(64,room_height/2,layer,oSpawnPortal)) {image_index = 1;}
 	with(instance_create_layer(room_width-64,64,layer,oSpawnPortal)) {image_index = 1;}
 }
-
-spellCooldown --;
-summonCooldown --;
+if (teleportCooldown <= 0){
+	teleportCooldown = room_speed * 15;
+	sprite_index = sDemonMinibossPortal;
+}
+if (sprite_index == sDemonMiniboss){
+	teleportCooldown --;
+	spellCooldown --;
+	summonCooldown --;
+}

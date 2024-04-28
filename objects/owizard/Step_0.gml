@@ -13,9 +13,9 @@ vsp = vMove;
 #region Player Shooting
 if (ds_list_find_index(global.currentUpgrades,oChargeShot)==-1){
 	if (mouse_check_button(mb_left)) and (cooldown <= 1){
-		cooldown = 30;
+		cooldown = maxCooldown;
 		with (instance_create_layer(x,y,layer,oFireball)){
-			speed = 10;
+			speed = other.bulletSpeed;
 			direction = point_direction(x,y,mouse_x,mouse_y);
 			image_angle = direction;
 			cantHurt = 0;
@@ -27,19 +27,17 @@ if (ds_list_find_index(global.currentUpgrades,oChargeShot)==-1){
 		currentCharge = min(maxCharge,currentCharge + chargeRate);
 	}
 	if (mouse_check_button_released(mb_left)) or (currentCharge >= maxCharge){
-		if (currentCharge >= 1){
-			with (instance_create_layer(x,y,layer,oFireball)){
-				speed = 10*other.currentCharge;
-				direction = point_direction(x,y,mouse_x,mouse_y);
-				image_angle = direction;
-				cantHurt = 0;
-				canSplit = true;
-				dmg = (global.data.baseDmg + global.addativeDmg) * (global.dmgMultiplier * other.maxCharge);
-				image_xscale = other.currentCharge;
-				image_yscale = other.currentCharge;
-			}
-			currentCharge = 0;
+		with (instance_create_layer(x,y,layer,oFireball)){
+			speed = 10*other.currentCharge;
+			direction = point_direction(x,y,mouse_x,mouse_y);
+			image_angle = direction;
+			cantHurt = 0;
+			canSplit = true;
+			dmg = (global.data.baseDmg + global.addativeDmg) * (global.dmgMultiplier) * (other.maxCharge);
+			image_xscale = other.currentCharge;
+			image_yscale = other.currentCharge;
 		}
+		currentCharge = 0		
 	}
 }
 cooldown --;
