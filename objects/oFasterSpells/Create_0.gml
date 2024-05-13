@@ -7,6 +7,7 @@ clicked = function() {
 	ds_list_delete(global.availableUpgrades,  ds_list_find_index(global.availableUpgrades,oFasterSpells));
 	ds_list_add(global.currentUpgrades, oFasterSpells);
 	oWizard.maxCooldown -= (oWizard.maxCooldown * 0.2);
+	oWizard.chargeRate += (oWizard.chargeRate * 0.2);
 	oWizard.bulletSpeed += (oWizard.bulletSpeed * 0.15);
 }
 

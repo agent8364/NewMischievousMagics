@@ -32,6 +32,10 @@ function InitScript(){
 		DASH = 0,
 		NOTDASH = 1
 	}
+	enum States{
+		MENU = 0,
+		HUB = 1
+	}
 	//Enemies
 	global.DungeonEnemies = ds_list_create();
 	ds_list_add(global.DungeonEnemies,oSlime);
@@ -88,7 +92,8 @@ part_type_speed(global.AlsoRedSmokeType,0.5,1,0,0);
 part_type_color1(global.AlsoRedSmokeType,c_red);
 #endregion
 #region Variables
-global.wave = 0;
+global.gameState = States.MENU;
+global.wave = 24;
 global.canExplode = false;
 global.explosionRadius = 1
 global.addativeDmg = 0;
@@ -116,20 +121,22 @@ global.data = {
 #region Upgrades
 global.currentUpgrades = ds_list_create();
 global.availableUpgrades = ds_list_create();
-ds_list_add(global.availableUpgrades,oBurst);
-ds_list_add(global.availableUpgrades,oMagnetize);
+ds_list_add(global.availableUpgrades,oBurst); //Functions
+ds_list_add(global.availableUpgrades,oMagnetize); //Functions
 ds_list_add(global.availableUpgrades,oExplosivity); //CURSED
 ds_list_add(global.availableUpgrades,oExperimentalExplosives); //CURSED
 ds_list_add(global.availableUpgrades,oNuclear);
 ds_list_add(global.availableUpgrades,oShortFuse);
-ds_list_add(global.availableUpgrades,oSuperRange);
+ds_list_add(global.availableUpgrades,oSuperRange); //Functions
 ds_list_add(global.availableUpgrades,oExtraLife);
-ds_list_add(global.availableUpgrades,oReinvigorate);
-ds_list_add(global.availableUpgrades,oTurbo);
-ds_list_add(global.availableUpgrades,oPowerShot);
-ds_list_add(global.availableUpgrades,oBombShots);
-ds_list_add(global.availableUpgrades,oChargeShot);
-ds_list_add(global.availableUpgrades,oFasterSpells);
+ds_list_add(global.availableUpgrades,oReinvigorate); //Functions
+ds_list_add(global.availableUpgrades,oTurbo); //Functions
+ds_list_add(global.availableUpgrades,oPowerShot); //Functions
+ds_list_add(global.availableUpgrades,oBombShots); //Functions
+ds_list_add(global.availableUpgrades,oChargeShot); //Functions
+ds_list_add(global.availableUpgrades,oFasterSpells); //Functions
+ds_list_add(global.availableUpgrades,oTripleShot);
+ds_list_add(global.availableUpgrades,oBiggerBlast);
 #endregion
 #region Viewport Moniter Stuff
 view_wport[0] = window_get_width();

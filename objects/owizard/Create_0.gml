@@ -13,14 +13,21 @@ bulletSpeed = 10;
 
 //Player Stats
 hp = 100;
-xp = 111000;
+xp = 10000000;
 neededXP = 5;
 
 levelUp = false;
 playerRange = 10 + global.data.baseRange;
 global.dmgType = Type.NORMAL;
+projectileType = sFireball;
+projectileCount = 6;
+multishotSpread = 45;
+maxSpread = 20;
 
 //Charge Stuff
 currentCharge = 0;
 maxCharge = 3;
 chargeRate = 0.05;
+
+//Other
+alarm[0] = 1;

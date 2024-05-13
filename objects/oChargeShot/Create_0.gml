@@ -6,6 +6,7 @@ clicked = function() {
 	global.text = "";
 	ds_list_delete(global.availableUpgrades,  ds_list_find_index(global.availableUpgrades,oChargeShot));
 	ds_list_add(global.currentUpgrades, oChargeShot);
+	oWizard.projectileType = sVortex;
 
 }
 

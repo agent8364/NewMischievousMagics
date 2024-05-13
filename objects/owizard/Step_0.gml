@@ -12,14 +12,29 @@ vsp = vMove;
 #endregion
 #region Player Shooting
 if (ds_list_find_index(global.currentUpgrades,oChargeShot)==-1){
-	if (mouse_check_button(mb_left)) and (cooldown <= 1){
+	if (mouse_check_button(mb_left)) and (cooldown <= 1) and (global.gameState != States.MENU){
 		cooldown = maxCooldown;
-		with (instance_create_layer(x,y,layer,oFireball)){
-			speed = other.bulletSpeed;
-			direction = point_direction(x,y,mouse_x,mouse_y);
-			image_angle = direction;
-			cantHurt = 0;
-			canSplit = true;
+		var dir = -1;
+		var count = projectileCount;
+		var shotAngle = (min(maxSpread,multishotSpread / (projectileCount-1))) * dir;
+		while (count > 0){
+			with (instance_create_layer(x,y,layer,oFireball)){
+				speed = other.bulletSpeed;
+				direction = point_direction(x,y,mouse_x,mouse_y);
+				if (count > 1){
+					dir = 1;
+					if (count div 2 == count / 2){
+						dir = -1;
+					}
+					direction += ((count div 2) * shotAngle) * dir;
+				}
+				image_angle = direction;
+				cantHurt = 0;
+				canSplit = true;
+				sprite_index = other.projectileType;
+				
+			}
+			count --;
 		}
 	}
 }else{
@@ -27,17 +42,20 @@ if (ds_list_find_index(global.currentUpgrades,oChargeShot)==-1){
 		currentCharge = min(maxCharge,currentCharge + chargeRate);
 	}
 	if (mouse_check_button_released(mb_left)) or (currentCharge >= maxCharge){
-		with (instance_create_layer(x,y,layer,oFireball)){
-			speed = 10*other.currentCharge;
-			direction = point_direction(x,y,mouse_x,mouse_y);
-			image_angle = direction;
-			cantHurt = 0;
-			canSplit = true;
-			dmg = (global.data.baseDmg + global.addativeDmg) * (global.dmgMultiplier) * (other.maxCharge);
-			image_xscale = other.currentCharge;
-			image_yscale = other.currentCharge;
+		repeat (projectileCount){
+			with (instance_create_layer(x,y,layer,oFireball)){
+				speed = other.bulletSpeed/2;
+				direction = point_direction(x,y,mouse_x,mouse_y) + ((max(other.maxSpread,other.multishotSpread / (other.projectileCount-1))) * dir);
+				image_angle = direction;
+				cantHurt = 0;
+				canSplit = true;
+				dmg = ((global.data.baseDmg + global.addativeDmg) * (global.dmgMultiplier)) * (other.maxCharge);
+				image_xscale = max(other.currentCharge,0.5);
+				image_yscale = max(other.currentCharge,0.5);
+				sprite_index = other.projectileType;
+			}
+			currentCharge = 0;
 		}
-		currentCharge = 0		
 	}
 }
 cooldown --;

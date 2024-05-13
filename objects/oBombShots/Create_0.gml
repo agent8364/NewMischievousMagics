@@ -7,6 +7,7 @@ clicked = function() {
 	ds_list_delete(global.availableUpgrades,  ds_list_find_index(global.availableUpgrades,oBombShots));
 	ds_list_add(global.currentUpgrades, oBombShots);
 	global.canExplode = true;
+	oWizard.projectileType = sIceBomb;
 }
 
 event_inherited();
